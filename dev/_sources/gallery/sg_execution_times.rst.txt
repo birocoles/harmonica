@@ -1,0 +1,13 @@
+
+:orphan:
+
+.. _sphx_glr_gallery_sg_execution_times:
+
+Computation times
+=================
+**00:03.182** total execution time for **gallery** files:
+
+- **00:01.222**: :ref:`sphx_glr_gallery_gravity_disturbance.py` (``gravity_disturbance.py``)
+- **00:00.903**: :ref:`sphx_glr_gallery_gravity_disturbance_topofree.py` (``gravity_disturbance_topofree.py``)
+- **00:00.692**: :ref:`sphx_glr_gallery_normal_gravity.py` (``normal_gravity.py``)
+- **00:00.366**: :ref:`sphx_glr_gallery_isostasy_airy.py` (``isostasy_airy.py``)

@@ -1,0 +1,11 @@
+
+:orphan:
+
+.. _sphx_glr_gallery_forward_sg_execution_times:
+
+Computation times
+=================
+**00:06.019** total execution time for **gallery_forward** files:
+
+- **00:04.876**: :ref:`sphx_glr_gallery_forward_tesseroid.py` (``tesseroid.py``)
+- **00:01.144**: :ref:`sphx_glr_gallery_forward_point_mass.py` (``point_mass.py``)

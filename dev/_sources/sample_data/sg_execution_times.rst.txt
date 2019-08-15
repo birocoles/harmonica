@@ -1,0 +1,13 @@
+
+:orphan:
+
+.. _sphx_glr_sample_data_sg_execution_times:
+
+Computation times
+=================
+**00:03.843** total execution time for **sample_data** files:
+
+- **00:01.690**: :ref:`sphx_glr_sample_data_rio_magnetic.py` (``rio_magnetic.py``)
+- **00:00.776**: :ref:`sphx_glr_sample_data_earth_geoid.py` (``earth_geoid.py``)
+- **00:00.701**: :ref:`sphx_glr_sample_data_earth_topography.py` (``earth_topography.py``)
+- **00:00.677**: :ref:`sphx_glr_sample_data_earth_gravity.py` (``earth_gravity.py``)
