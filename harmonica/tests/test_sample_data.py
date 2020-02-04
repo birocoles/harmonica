@@ -1,16 +1,27 @@
 """
 Test the sample data loading functions.
 """
+import os
+
 import numpy.testing as npt
 
 from ..datasets.sample_data import (
+    locate,
     fetch_gravity_earth,
     fetch_geoid_earth,
     fetch_topography_earth,
-    fetch_rio_magnetic,
     fetch_britain_magnetic,
     fetch_south_africa_gravity,
 )
+
+
+def test_datasets_locate():
+    "Make sure the data cache location has the right package name"
+    path = locate()
+    assert os.path.exists(path)
+    # This is the most we can check in a platform independent way without
+    # testing appdirs itself.
+    assert "harmonica" in path
 
 
 def test_geoid_earth():
@@ -37,23 +48,6 @@ def test_topography_earth():
     assert grid.topography.shape == (361, 721)
     npt.assert_allclose(grid.topography.max(), 5651, atol=1)
     npt.assert_allclose(grid.topography.min(), -8409, atol=1)
-
-
-def test_rio_magnetic():
-    "Sanity checks for the loaded dataset"
-    data = fetch_rio_magnetic()
-    assert data.shape == (81796, 6)
-    npt.assert_allclose(data.longitude.min(), -43.199966)
-    npt.assert_allclose(data.longitude.max(), -41.950012)
-    npt.assert_allclose(data.latitude.min(), -22.569992)
-    npt.assert_allclose(data.latitude.max(), -22.050003)
-    npt.assert_allclose(data.total_field_anomaly_nt.min(), -636.180000)
-    npt.assert_allclose(data.total_field_anomaly_nt.max(), 875.120000)
-    npt.assert_allclose(data.altitude_m.min(), 62.180000)
-    npt.assert_allclose(data.altitude_m.max(), 300.000000)
-    npt.assert_allclose(data.line_number.min(), 1680)
-    npt.assert_allclose(data.line_number.max(), 9600)
-    assert set(data.line_type.unique()) == {"TIE", "LINE"}
 
 
 def test_britain_magnetic():

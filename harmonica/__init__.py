@@ -2,16 +2,10 @@
 # Import functions/classes to make the public API
 from . import version
 from . import datasets
-from .ellipsoid import (
-    set_ellipsoid,
-    get_ellipsoid,
-    print_ellipsoids,
-    ReferenceEllipsoid,
-)
+from . import synthetic
 from .io import load_icgem_gdf
 from .isostasy import isostasy_airy
-from .gravity_corrections import normal_gravity, bouguer_correction
-from .coordinates import geodetic_to_spherical, spherical_to_geodetic
+from .gravity_corrections import bouguer_correction
 from .forward.point_mass import point_mass_gravity
 from .forward.tesseroid import tesseroid_gravity
 from .forward.prism import prism_gravity
